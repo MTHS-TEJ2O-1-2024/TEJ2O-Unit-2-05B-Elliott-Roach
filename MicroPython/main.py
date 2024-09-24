@@ -6,16 +6,17 @@ This module is a Micro:bit MicroPython program takes tempitur and converts to ke
 
 from microbit import *
 
-temperature = 0
+temp_k = 0
 
 display.clear()
 sleep(1000)
 
 while True:
     if button_a.is_pressed():
-        temperature = temperature()
-        temperature = round
+        temp_k = temperature
+        temp_k = str(temp_k + 273.15)
+        temp_k = round
         display.scroll("the temperature is:")
-        display.show(temperature)
+        display.show(temp_k)
         display.scroll("K.")
         display.show(Image.HAPPY)
