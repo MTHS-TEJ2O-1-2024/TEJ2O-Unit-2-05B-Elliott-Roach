@@ -13,7 +13,7 @@ sleep(1000)
 
 while True:
     if button_a.is_pressed():
-        temperature = temperature
+        temperature = temperature()
         temperature = round
         display.scroll("the temperature is:")
         display.show(temperature)
