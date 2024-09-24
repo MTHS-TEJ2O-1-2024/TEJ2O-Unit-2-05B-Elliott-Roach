@@ -1,10 +1,21 @@
 """
-Created by: Mr. Coxall
-Created on: Sep 2020
-This module is a Micro:bit MicroPython program
+Created by: Elliott
+Created on: Sep 2024
+This module is a Micro:bit MicroPython program takes tempitur and converts to kelven
 """
 
 from microbit import *
 
+temperature = 0
 
-display.scroll("Hello, World!")
+display.clear()
+sleep(1000)
+
+while True:
+    if button_a.is_pressed():
+        temperature = temperature + input.temperature()
+        temperature = round
+        display.scroll("the temperature is:")
+        display.show(temperature)
+        display.scroll("K.")
+        display.show(Image.HAPPY)
